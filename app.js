@@ -406,197 +406,80 @@ const names = ["      a  k  o     " , "      fate     meh" , "     n  ima" , "  
 //     }
 // } , 1000)
 
-
-// const obj1 ={
-//     fName : "mahdi",
-//     lName : "rezainiya",
-//     age : 22 ,
-// };
-
-// const obj2 = {
-//     single : false,
-//     country : "Iran",
-//     city : "tabriz"
+const person = {name :"mahdi" , city : "tabriz"};
+const personOne = {fname :"ali" , city : "tabriz"};
+const personTwo = {lname :"mardani" , uni : "shiraz"};
+// for(let item in person){
+//     console.log(`${item} : ${person[item]}`);
 // }
 
-// // object assign for merging
-// const mergedObject = Object.assign(obj1 , obj2);
-// // for(let item in  obj1){
-// //     console.log(`${item} : ${obj1[item]}`);
-// // };
-
-// // object keys
-// let objKeys = Object.keys(obj1);
-// // object values
-// let objValues = Object.values(obj1);
-// // object entries
-// let objEntries = Object.entries(obj1);
-// // console.log(objKeys);
-// // console.log(objValues);
-// // console.log(objEntries);
-// // console.log(mergedObject);
-
-// // object create
-// const secondObject = Object.create(obj1);
-// // console.log(secondObject);
-// // console.log(secondObject.fName);
-// // secondObject.mahdi = "mahdi";
-// // secondObject.sayHello = () => {
-// //     console.log(console.log(`Hi my name is ${secondObject.fName}`););
-// // }
-// // console.log(secondObject.sayHello());
-
-
-// // object freeze
-// // Object.freeze(mergedObject);
-// // mergedObject.hello = "hello";
-// // console.log(mergedObject);
-
-// // object seal
-// // Object.seal(mergedObject);
-// // mergedObject.d = 12 ;
-// // delete mergedObject.city;
-
-// // mergedObject.city = "tehran";
-// // console.log(mergedObject);
-
-
-// // object hasOwnProperty
-// // console.log(mergedObject.hasOwnProperty('age'));
-
-
-// // const heading = document.createElement('h1');
-
-// // heading.textContent = 'mahdi rezainiya';
-
-// // console.log(heading);
-
-
-// // console.log(body);
-
-// // const akoClass = document.querySelector('.ako');
-// // akoClass.classList.add('team' , 'mahdi');
-// // akoClass.classList.remove('mahdi');
-// // akoClass.classList.toggle('mahdi')
-// // console.log(akoClass.classList);
-
-// // console.log(divAdd.parentElement);
-
-// const body = document.querySelector('body');
-// const headerAdd = document.createElement('header');
-// const mainAdd = document.createElement('main');
-// const footerAdd = document.createElement('footer');
-// // const ul = document.createElement('ul');
-
-// // body.prepend(headerAdd);
-// // mainAdd.append(ul);
-// body.append(mainAdd);
-// // body.append(footerAdd);
-
-// // for(let i = 0 ; i < 6 ; i++){
-// //     const li = document.createElement('li');
-// //     li.textContent = i ;
-// //     ul.append(li)
-// // }
-
-
-// for (let i = 0 ; i < 10 ; i++){
-//     const para = document.createElement("p");
-//     para.setAttribute("class" , `paraClass ${i}`);
-//     mainAdd.append(para);
-// }
-// const paraNode = document.querySelectorAll('.paraClass');
-// paraNode.forEach((elem , index) => {
-//     if(index % 2 === 0){
-//         elem.addEventListener('click' , () => {
-//             elem.classList.toggle = 'pinkColor'
-//         })
-//         elem.textContent = "mahdi";
-//         elem.style.backgroundColor = "green";
-//     }
-//     else{
-//         elem.addEventListener('click' , () => {
-//             elem.classList.toggle('redColor')
-//         })
-//         elem.textContent = "rezainiya";
-//         elem.style.backgroundColor = "blue"
-//     }
+// const personKeys = Object.keys(person);
+// personKeys.forEach((item) => {
+    // console.log(item);
 // })
+// console.log(personKeys); 
+
+// const personValues = Object.values(person);
+// console.log(personValues);
+
+// convert object to array all of them
+// const personEntries = Object.entries(person);
+// console.log(personEntries);
+
+// const personAssign = Object.assign(personOne , personTwo);
+// console.log(personAssign);
+
+// const personCreate = Object.create(person);
+// console.log(personCreate.name , personCreate.city);
+
+// const personFreeze = Object.freeze(person);
+// personFreeze.uni = "tehran";
+// delete personFreeze.city;
+// personFreeze.city = '';
+// console.log(personFreeze);
+
+// const personSeal = Object.seal(person);
+// personSeal.uni = "mashhad";
+// delete personSeal.city ;
+// personSeal.city = "";  =====> this is possible here
+// console.log(personSeal);
+
+// const result = person.hasOwnProperty("name");
+// console.log(result);
+
+// DOM
+// document.getElementById("");
+// document.getElementsByClassName("");
+// document.getElementsByName("");
+// document.querySelector("");
+// document.querySelectorAll("");
+
+// textContent
+// innerHTML
+// innerText
+
+const h1 = document.querySelector(".h1");
+const h2 = document.querySelector(".h2");
+// console.log(h1.textContent);
+// console.log(h1.innerText);
+// console.log(h2.innerHTML);
+// console.log(h2.innerText);
+
+// console.log(h1.classList);
+// h1.classList.add("mahdi");
+// h1.classList.remove("mahdi");
+// h1.classList.toggle("h1");
+// const result = h1.classList.contains("h1");
+// h1.classList.item(2);
+
+// h1.style.backgroundColor = "blue";
+
+// const result = h1.getAttribute("class");
+h1.setAttribute("title" , "mahdi");
+console.log(h1);
+
+// new session
 
 
-// const inputUserName = document.querySelector('#username');
-// const h1 = document.createElement("h1");
-// const body = document.querySelector("body");
-// body.prepend(h1);
-
-// inputUserName.addEventListener("input" , function(){
-//     if(inputUserName.value === ""){
-//         h1.textContent = "zinari"
-//     }
-//     else{
-//         h1.textContent = this.value ;
-
-//     }
-//     // console.log(value);
-// })
 
 
-
-// const inputUserName = document.querySelector('#username');
-// inputUserName.addEventListener("change" , (e) => {
-//     console.log(e.target.value);
-// })
-
-// const select = document.querySelector("select");
-// const products = document.querySelectorAll("section");
-
-// select.addEventListener("change" , (e) => {
-//     const value = e.target.value;
-//     products.forEach((section) => {
-//         if(section.id === value){
-//             section.style.display = "block";
-//         }
-//         else if(value === "all"){
-//             section.style.display = "block";
-//         }
-//         else{
-//             section.style.display = "none";
-//         }
-//     })
-// })
-
-
-// const div = document.querySelector("div");
-// div.addEventListener("click" , (e) => {
-//     // console.log(e.target.textContent);
-//     // console.log(e.target.localName);
-//     // console.log(e.target.id);
-//     if(e.target.id === "green"){
-//         e.target.classList.toggle("green")
-//     }
-//     else if(e.target.id === "red"){
-//         e.target.classList.toggle("red")
-//     }
-//     else if(e.target.id === "blue"){
-//         e.target.classList.toggle("blue")
-//     }
-//     else{
-//         e.target.classList.toggle("pink")
-//     }
-// })
-
-
-function firstName () {
-    console.log("mahdi");
-}
-function lastName () {
-    firstName()
-    console.log("rezainiya");
-}
-function fullName () {
-    lastName();
-    // console.log("mahdi rezainiya");
-
-
-}
-fullName();
