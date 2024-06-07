@@ -75,8 +75,8 @@
 //         console.log("nooooooooo");
 // }
 
-let arr1 = [1 , 3 , 11 , 57 , 8 , 9 , 87];
-let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
+// let arr1 = [1 , 3 , 11 , 57 , 8 , 9 , 87];
+// let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
 // let concating = arr1.concat(arr2)
 // console.log(arr1.length);
 // console.log(arr1[1]);
@@ -268,7 +268,6 @@ let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
 //     }
 // }
 
-
 // let fname = "mahdi";
 // console.log(name.trim());
 // console.log(fname.slice(0 , 2));
@@ -301,7 +300,6 @@ let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
 // let reduceNum = numbers.reduce((sum , cValue) => {
 //     return sum += cValue;
 // })
-
 
 // let someNum = numbers.every((item) => {
 //     return item > 3  ;
@@ -344,11 +342,7 @@ let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
 // let obj = {...obj1 , ...obj2};
 // console.log(obj);
 
-
-
-
 // const numbers = [1 , 2 , 3 , 4 , 5];
-
 
 // for(let i = 0 ; i < numbers.length ; i++){
 //     console.log(numbers[i]);
@@ -385,7 +379,7 @@ let arr2 = [5 , 84 , 54 , 23 , 64 , 91];
 //     console.log(powerTwo(number));
 // }
 
-const names = ["      a  k  o     " , "      fate     meh" , "     n  ima" , "  mahdi  " , "mayam    "];
+// const names = ["      a  k  o     " , "      fate     meh" , "     n  ima" , "  mahdi  " , "mayam    "];
 // const names = "fatemeh";
 
 // console.log(names.split("").reverse().join(""));
@@ -406,25 +400,35 @@ const names = ["      a  k  o     " , "      fate     meh" , "     n  ima" , "  
 //     }
 // } , 1000)
 
-const person = {name :"mahdi" , city : "tabriz"};
-const personOne = {fname :"ali" , city : "tabriz"};
-const personTwo = {lname :"mardani" , uni : "shiraz"};
+// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+// const personOne = {fname :"ali" , city : "tabriz"};
+// const personTwo = {lname :"mardani" , uni : "shiraz"};
 // for(let item in person){
 //     console.log(`${item} : ${person[item]}`);
 // }
 
-// const personKeys = Object.keys(person);
+// const personKeys = Object.keys(person).filter((item , index) => {
+    // return item === "lastName";
+    // return index ;
+// });
 // personKeys.forEach((item) => {
     // console.log(item);
 // })
 // console.log(personKeys); 
 
-// const personValues = Object.values(person);
+// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+
+// const personValues = Object.values(person).filter((value) => {
+//     return value === "ali" ? "mahdi" : null
+// });
 // console.log(personValues);
 
 // convert object to array all of them
 // const personEntries = Object.entries(person);
 // console.log(personEntries);
+
+// const personOne = {fname :"ali" , city : "tabriz"};
+// const personTwo = {lname :"mardani" , uni : "shiraz"};
 
 // const personAssign = Object.assign(personOne , personTwo);
 // console.log(personAssign);
@@ -432,20 +436,31 @@ const personTwo = {lname :"mardani" , uni : "shiraz"};
 // const personCreate = Object.create(person);
 // console.log(personCreate.name , personCreate.city);
 
+// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+
 // const personFreeze = Object.freeze(person);
 // personFreeze.uni = "tehran";
 // delete personFreeze.city;
 // personFreeze.city = '';
 // console.log(personFreeze);
 
+// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+
 // const personSeal = Object.seal(person);
 // personSeal.uni = "mashhad";
 // delete personSeal.city ;
-// personSeal.city = "";  =====> this is possible here
+// personSeal.city = "";  //=====> this is possible here
 // console.log(personSeal);
 
 // const result = person.hasOwnProperty("name");
 // console.log(result);
+
+//object vs json
+// {
+//     "name" "mahdi",
+//     "age" : 20 ,
+//     "isTrue" : true ;
+// }
 
 // DOM
 // document.getElementById("");
@@ -458,8 +473,8 @@ const personTwo = {lname :"mardani" , uni : "shiraz"};
 // innerHTML
 // innerText
 
-const h1 = document.querySelector(".h1");
-const h2 = document.querySelector(".h2");
+// const h1 = document.querySelector(".h1");
+// const h2 = document.querySelector(".h2");
 // console.log(h1.textContent);
 // console.log(h1.innerText);
 // console.log(h2.innerHTML);
@@ -475,8 +490,8 @@ const h2 = document.querySelector(".h2");
 // h1.style.backgroundColor = "blue";
 
 // const result = h1.getAttribute("class");
-h1.setAttribute("title" , "mahdi");
-console.log(h1);
+// h1.setAttribute("title" , "mahdi");
+// console.log(h1);
 
 // new session
 
