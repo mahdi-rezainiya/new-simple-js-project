@@ -494,9 +494,3 @@
 // console.log(h1);
 
 // new session
-
-
-
-
-
-
