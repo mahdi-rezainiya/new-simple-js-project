@@ -494,3 +494,154 @@
 // console.log(h1);
 
 // new session
+
+
+
+
+// await & async
+
+// function request (){
+    // return  new Promise(() => {});
+// }
+
+
+// async function request(){
+// }
+
+// const request = async () => {
+//     return [1 , 2 , 3 , 4];
+// };
+
+// const request = new Promise((resolve , reject)=>{
+//     2 === 2 ? resolve("run server") : reject("error server");
+// })
+
+// async function request(){
+//     throw "mahdi";
+// }
+
+// async function request () {
+//     return "mahdi";
+//     throw "Error";
+// }
+
+// async function request (){
+//     if(2 === 2 ){
+//         return "run server"
+//     }
+//     else {
+//         throw "error server"
+//     }
+// }
+
+// request().then(
+//     (res)=>{
+//         alert(res)
+//     }
+// )
+// .catch(
+//     (err) => {
+//         alert(err)
+//     }
+// )
+// console.log(request());
+
+// async function userLogin (username , password){
+//     if(!username ||  !password){
+//         throw "missing credential";
+//     }
+//     if(password === "hi"){   
+//         return "hello";
+//     }
+//     throw "invalid pass";
+// }
+
+// console.log(userLogin("nima" , "hi"));
+// userLogin("nima" , "hi").then(
+//     (res) => {
+//         console.log(res);
+//     }
+// ).catch(
+//     (err) => {
+//         console.log(err);
+//     }
+// );
+
+
+const passwordUser = prompt("please enter password :")
+function userLogin (username , password){
+    return new Promise((resolve , reject) => {
+        if(! username || !password){
+            reject("missing credential")
+        }
+        if(password === "hi"){
+            resolve("hello")
+        }
+        reject("invalid pass") 
+    })
+}
+
+
+// console.log(userLogin("zahra" , "la la"));
+userLogin("maryam" , passwordUser).then((res) => {
+    // console.log("run server");
+    console.log(res);
+}
+).catch(() => {
+    console.log("error server");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
