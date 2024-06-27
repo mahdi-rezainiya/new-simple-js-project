@@ -582,7 +582,6 @@ function userLogin (username , password){
 }
 
 
-
 // console.log(userLogin("zahra" , "la la"));
 // userLogin("maryam" , passwordUser).then((res) => {
 //     // console.log("run server");
@@ -591,16 +590,6 @@ function userLogin (username , password){
 // ).catch(() => {
 //     console.log("error server");
 // })
-
-
-
-
-
-
-
-
-
-
 
 
 
