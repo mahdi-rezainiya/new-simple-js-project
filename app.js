@@ -400,240 +400,95 @@
 //     }
 // } , 1000)
 
-// const person = {name :"mahdi" , city : "tabriz" , age : 22};
-// const personOne = {fname :"ali" , city : "tabriz"};
-// const personTwo = {lname :"mardani" , uni : "shiraz"};
-// for(let item in person){
-//     console.log(`${item} : ${person[item]}`);
+// session 5
+
+const person = {name : "mahdi" , age : 22 , city : "tabriz"};
+
+// for in
+// for(const key in person){
+//     console.log(key , person[key]);
 // }
 
-// const personKeys = Object.keys(person).filter((item , index) => {
-    // return item === "lastName";
-    // return index ;
-// });
-// personKeys.forEach((item) => {
-    // console.log(item);
-// })
-// console.log(personKeys); 
+// object keys
+// const keys = Object.keys(person);
+// console.log(keys);
 
-// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+// object values
+// const values = Object.values(person);
+// console.log(values);
 
-// const personValues = Object.values(person).filter((value) => {
-//     return value === "ali" ? "mahdi" : null
-// });
-// console.log(personValues);
+// object entries
+// const entries = Object.entries(person);
+// console.log(entries);
 
-// convert object to array all of them
-// const personEntries = Object.entries(person);
-// console.log(personEntries);
+// object assign
+// const person1 = {fname : "mahdi" , age : 22 };
+// const person2 = {lname : "rezainiya" , city : "tabriz"};
+// const fullPerson = Object.assign(person1 , person2);
+// console.log(fullPerson);
 
-// const personOne = {fname :"ali" , city : "tabriz"};
-// const personTwo = {lname :"mardani" , uni : "shiraz"};
+// object create
+// const person = {name : "mahdi" , age : 22 , city : "tabriz"};
+// const me = Object.create(person);
+// console.log(me.name);
+// console.log(me.age);
+// console.log(me.city);
 
-// const personAssign = Object.assign(personOne , personTwo);
-// console.log(personAssign);
+// object freeze
+// Object.freeze(person)
+// person.friend = "ali";
+// person.name = "";
+// delete person.name;
+// console.log(person);
 
-// const personCreate = Object.create(person);
-// console.log(personCreate.name , personCreate.city);
+// object seal
+// Object.seal(person);
+// person.friend = "ali";
+// delete person.name ;
+// person.name = "hamed" // this is okey
+// console.log(person);
 
-// const person = {name :"mahdi" , city : "tabriz" , age : 22};
+// hasOwnProperty
+// const a = person.hasOwnProperty("name");
+// const b = person.hasOwnProperty("mahdi");
+// console.log(a);
+// console.log(b);
 
-// const personFreeze = Object.freeze(person);
-// personFreeze.uni = "tehran";
-// delete personFreeze.city;
-// personFreeze.city = '';
-// console.log(personFreeze);
-
-// const person = {name :"mahdi" , city : "tabriz" , age : 22};
-
-// const personSeal = Object.seal(person);
-// personSeal.uni = "mashhad";
-// delete personSeal.city ;
-// personSeal.city = "";  //=====> this is possible here
-// console.log(personSeal);
-
-// const result = person.hasOwnProperty("name");
-// console.log(result);
-
-//object vs json
-// {
-//     "name" "mahdi",
-//     "age" : 20 ,
-//     "isTrue" : true ;
-// }
-
+// JSON
 // DOM
-// document.getElementById("");
-// document.getElementsByClassName("");
-// document.getElementsByName("");
-// document.querySelector("");
-// document.querySelectorAll("");
 
-// textContent
-// innerHTML
-// innerText
-
-// const h1 = document.querySelector(".h1");
-// const h2 = document.querySelector(".h2");
-// console.log(h1.textContent);
-// console.log(h1.innerText);
-// console.log(h2.innerHTML);
-// console.log(h2.innerText);
-
-// console.log(h1.classList);
-// h1.classList.add("mahdi");
-// h1.classList.remove("mahdi");
-// h1.classList.toggle("h1");
-// const result = h1.classList.contains("h1");
-// h1.classList.item(2);
-
-// h1.style.backgroundColor = "blue";
-
-// const result = h1.getAttribute("class");
-// h1.setAttribute("title" , "mahdi");
+// const h1 = document.getElementById("h1");
 // console.log(h1);
-
-// new session
-
-
-
-
-// await & async
-
-// function request (){
-    // return  new Promise(() => {});
-// }
-
-
-// async function request(){
-// }
-
-// const request = async () => {
-//     return [1 , 2 , 3 , 4];
-// };
-
-// const request = new Promise((resolve , reject)=>{
-//     2 === 2 ? resolve("run server") : reject("error server");
-// })
-
-// async function request(){
-//     throw "mahdi";
-// }
-
-// async function request () {
-//     return "mahdi";
-//     throw "Error";
-// }
-
-// async function request (){
-//     if(2 === 2 ){
-//         return "run server"
-//     }
-//     else {
-//         throw "error server"
-//     }
-// }
-
-// request().then(
-//     (res)=>{
-//         alert(res)
-//     }
-// )
-// .catch(
-//     (err) => {
-//         alert(err)
-//     }
-// )
-// console.log(request());
-
-// async function userLogin (username , password){
-//     if(!username ||  !password){
-//         throw "missing credential";
-//     }
-//     if(password === "hi"){   
-//         return "hello";
-//     }
-//     throw "invalid pass";
-// }
-
-// console.log(userLogin("nima" , "hi"));
-// userLogin("nima" , "hi").then(
-//     (res) => {
-//         console.log(res);
-//     }
-// ).catch(
-//     (err) => {
-//         console.log(err);
-//     }
-// );
-
-
-const passwordUser = prompt("please enter password :")
-function userLogin (username , password){
-    return new Promise((resolve , reject) => {
-        if(! username || !password){
-            reject("missing credential")
-        }
-        if(password === "hi"){
-            resolve("hello")
-        }
-        reject("invalid pass") 
-    })
-}
-
-
-// console.log(userLogin("zahra" , "la la"));
-// userLogin("maryam" , passwordUser).then((res) => {
-//     // console.log("run server");
-//     console.log(res);
-// }
-// ).catch(() => {
-//     console.log("error server");
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const h2 = document.getElementsByClassName('h2');
+// console.log(h2);
+// const heading = document.getElementsByName('h1');
+// console.log(heading);
+// const heading = document.querySelector(".ako");
+// const heading = document.querySelectorAll(".ako");
+// console.log(heading);
+
+// const heading = document.querySelector('.ako');
+// heading.textContent = "hello world";
+// heading.textContent = <P>hello world</P>; //Error
+// heading.textContent = '<P>hello world</P>'; //Error
+// heading.innerHTML = '<P>hello world</P>';
+// heading.innerText = "hello world";
+// heading.innerText = <p>hello world</p>;
+// heading.innerText = '<p>hello world</p>';
+// console.log(heading); 
+
+const heading = document.querySelector('.ako');
+// heading.classList.add("highlight");
+// heading.classList.remove("highlight");
+// heading.classList.toggle("highlight");
+// const contains = heading.classList.contains("ako");
+// console.log(contains);
+// const first = heading.classList.item(0);
+// console.log(first);
+// heading.style.color = "red";
+// heading.style.backgroundColor = "blue";
+// const get = heading.getAttribute('class');
+// console.log(get);
+// heading.setAttribute('title' , "mahdi rezainiya");
+
+console.log(heading);
