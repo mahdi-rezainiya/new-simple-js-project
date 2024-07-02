@@ -228,10 +228,8 @@
 // console.log(arrayTwo);
 // console.log(obj2);
 
-
 // const neme = "ali";
 // console.log(neme.split("").reverse().join(""));
-
 
 // // ایجاد یک Array از اعداد
 // const numbers = [1, 2, 3, 4, 5];
@@ -241,8 +239,6 @@
 //     // TODO: 
 //     console.log(numbers[i]);
 // }
-
-
 
 // const userInput = prompt("Please enter a positive integer:");
 
@@ -402,7 +398,7 @@
 
 // session 5
 
-const person = {name : "mahdi" , age : 22 , city : "tabriz"};
+// const person = {name : "mahdi" , age : 22 , city : "tabriz"};
 
 // for in
 // for(const key in person){
@@ -477,7 +473,7 @@ const person = {name : "mahdi" , age : 22 , city : "tabriz"};
 // heading.innerText = '<p>hello world</p>';
 // console.log(heading); 
 
-const heading = document.querySelector('.ako');
+// const heading = document.querySelector('.ako');
 // heading.classList.add("highlight");
 // heading.classList.remove("highlight");
 // heading.classList.toggle("highlight");
@@ -491,4 +487,253 @@ const heading = document.querySelector('.ako');
 // console.log(get);
 // heading.setAttribute('title' , "mahdi rezainiya");
 
-console.log(heading);
+// console.log(heading);
+
+// session 6
+
+// parentElement
+// const body = document.querySelector('article').parentElement;
+// console.log(body);
+
+// children & childNodes
+// const children = document.querySelector('article').children;
+// const children = document.querySelector('article').childNodes;
+// console.log(children);
+
+// nextSibling & previousSibling
+// const sibling = document.querySelector('#one').previousSibling;
+// const sibling = document.querySelector('#one').nextSibling;
+// console.log(sibling);
+
+// nextElementSibling & previousElementSibling
+// const sibling = document.querySelector('#one').nextElementSibling;
+// const sibling = document.querySelector('#two').previousElementSibling;
+// console.log(sibling);
+
+// createElement & prepend & append
+// const p = document.createElement('p');
+// p.textContent = 'mahdi rezainiya';
+// const divOne = document.querySelector('#one');
+// divOne.prepend(p);
+// divOne.append(p);
+
+// remove 
+// const body = document.querySelector('body');
+// const divOne = document.querySelector('#one');
+// const one = document.querySelector('#o');
+// console.log(divOne);
+// console.log(one);
+// divOne.remove()
+
+// replaceWith
+// const body = document.querySelector('body');
+// const divOne = document.querySelector('#one');
+// const p = document.createElement('p');
+// p.textContent = 'mahdi rezainiya';
+// divOne.replaceWith(p);
+
+// cloneNode
+// const clone = body.cloneNode(false); // this just body tag
+// const clone= body.cloneNode(true); // this is all of the body tag and insides
+// console.log(clone);
+
+// addEventListener
+// click & event type
+// const one = document.querySelector('#one');
+// one.addEventListener('click' , function(e){
+    // alert("hello")
+    // console.log(e.type);
+// })
+
+// dbclick
+// const one = document.querySelector('#one');
+// one.addEventListener('dblclick' , function(e){
+//     alert("hello");
+// })
+
+// mouseover
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('mouseover' , function(e){
+//     console.log("hello");
+// })
+
+// mouseout
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('mouseout' , function(e){
+//     console.log("hello");
+// })
+
+// mouseout
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('mouseenter' , function(e){
+//     console.log("hello");
+// })
+
+// window
+// console.log(window);
+// console.log(window.location);
+// console.log(window.location.pathname);
+// console.log(window.innerWidth);
+// console.log(window.innerHeight);
+
+// resize
+// const heightOutput = document.querySelector("#height");
+// const widthOutput = document.querySelector("#width");
+// function reportWindowSize() {
+//     heightOutput.textContent = window.innerHeight;
+//     widthOutput.textContent = window.innerWidth;
+// }
+// window.onresize = reportWindowSize;
+// window.addEventListener("resize", reportWindowSize);
+
+// const body = document.querySelector('body');/
+// window.addEventListener("resize", () => {
+//     console.log(`width : ${window.innerWidth}`);
+//     console.log(`height: ${window.innerHeight}`);
+//     if (window.innerWidth > 500) {
+//         body.style.backgroundColor = "green";
+//     } else {
+//         body.style.backgroundColor = "blue";
+//     }
+// });
+
+// scroll
+// window.addEventListener('scroll' , function(){
+//     console.log("hello");
+// })
+
+// keyup
+// const inputOne = document.querySelector('#firstname');
+// const inputTwo = document.querySelector('lastname');
+// inputOne.addEventListener('keyup' , function(e) {
+//     console.log(inputOne.value);
+// })
+
+// keydown
+// const inputOne = document.querySelector('#firstname');
+// const inputTwo = document.querySelector('lastname');
+// inputOne.addEventListener('keydown' , function(e) {
+//     console.log(inputOne.value);
+// })
+
+// this
+// const inputOne = document.querySelector('#firstname');
+// inputOne.addEventListener('click' , function(e){
+//     console.log(this);
+// }) // this here output inputOne tag Element
+
+// const inputOne = document.querySelector('#firstname');
+// inputOne.addEventListener('click' , (e) => {
+//     console.log(this);
+// }) // this here output window whole
+
+// bubbling
+// const article = document.querySelector("article");
+// const section = document.querySelector("section");
+// const div = document.querySelector("div");
+
+// article.addEventListener("click", (e) => {
+//     alert("article");
+// });
+
+// section.addEventListener("click", (e) => {
+//     e.stopPropagation()
+//     alert("section");
+// });
+
+// div.addEventListener("click", (e) => {
+//     e.stopPropagation()
+//     alert("div");
+// });
+
+
+
+
+// submit form
+const form = document.querySelector('#submit');
+form.addEventListener('submit' , (e) => {
+    e.preventDefault();
+    alert('form sent')
+})
+
+
+
+
+
+// ___________________________________________________
+// #scroll
+// window.addEventListener("scroll", () => {
+//   console.log("ako");
+// });
+// ____________________________________________________
+// #bubbling
+// const article = document.querySelector("article");
+// const section = document.querySelector("section");
+// const div = document.querySelector("div");
+
+
+// ______________________________________________
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   console.log("ako team");
+// });
+// _____________________________________________
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//     console.log(form.btn);
+//   console.log(form.username);
+// });
+// ____________________________________________________
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//     console.log(form.btn.textContent);
+//   console.log(form.username.value);
+//   form.reset();
+// });
+// ______________________________________________________
+// #form example
+// const form = document.querySelector("form");
+// const ul = document.querySelector("ul");
+
+// function handelForm(event) {
+//   const target = event.target;
+//   event.preventDefault();
+//   const valueFirstName = target.firstname.value;
+//   const valueLastName = target.lastname.value;
+//   createList(valueFirstName, valueLastName);
+//   form.reset();
+// }
+
+// function createList(first, last) {
+//   const li = document.createElement("li");
+//   li.textContent = `${first} and ${last}`;
+//   ul.append(li);
+// }
+
+// form.addEventListener("submit", handelForm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
