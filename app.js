@@ -646,77 +646,78 @@
 //     alert("div");
 // });
 
-
-
-
 // submit form
-const form = document.querySelector('#submit');
-form.addEventListener('submit' , (e) => {
-    e.preventDefault();
-    alert('form sent')
-})
+// const form = document.querySelector('#submit');
+// form.addEventListener('submit' , (e) => {
+//     e.preventDefault();
+//     alert('form sent')
+// })
 
 
-
-
-
-// ___________________________________________________
-// #scroll
-// window.addEventListener("scroll", () => {
-//   console.log("ako");
+// session 7
+// const input = document.querySelector('#firstname'); // if not inside a form tag
+// console.log(input);
+// input.addEventListener('change' , function(e){
+//     console.log("changed");
 // });
-// ____________________________________________________
-// #bubbling
-// const article = document.querySelector("article");
-// const section = document.querySelector("section");
-// const div = document.querySelector("div");
 
+// const form = document.querySelector('#submit');
+// form.addEventListener('change' , (e) => {
+//     console.log("changed");
+// })
 
-// ______________________________________________
-// const form = document.querySelector("form");
-
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   console.log("ako team");
+// const input = document.querySelector('#firstname'); // if not inside a form tag
+// console.log(input);
+// input.addEventListener('input' , function(e){
+//     console.log("changing...");
 // });
-// _____________________________________________
-// const form = document.querySelector("form");
 
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//     console.log(form.btn);
-//   console.log(form.username);
-// });
-// ____________________________________________________
-// const form = document.querySelector("form");
+// const form = document.querySelector('#submit');
+// form.addEventListener('input' , (e) => {
+//     console.log("changing...");
+// })
 
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//     console.log(form.btn.textContent);
-//   console.log(form.username.value);
-//   form.reset();
-// });
-// ______________________________________________________
-// #form example
-// const form = document.querySelector("form");
-// const ul = document.querySelector("ul");
+// Event delegation
+// const list = document.querySelector("#myList");
+// // console.log(list);
+// list.addEventListener('click' , (e) => {
+//     // if(e.target.tagName = 'li'){
+//     //     console.log("this is list element");
+//     // }
+//     if(e.target.classList = "js"){
+//         console.log("this is Javascript");
+//     }
+// })
 
-// function handelForm(event) {
-//   const target = event.target;
-//   event.preventDefault();
-//   const valueFirstName = target.firstname.value;
-//   const valueLastName = target.lastname.value;
-//   createList(valueFirstName, valueLastName);
-//   form.reset();
+// CALL STACK
+// function a(){
+//     console.log("hello everyone");
+//     b();
 // }
-
-// function createList(first, last) {
-//   const li = document.createElement("li");
-//   li.textContent = `${first} and ${last}`;
-//   ul.append(li);
+// function b(){
+//     console.log("how are you ?");
 // }
+// a();
 
-// form.addEventListener("submit", handelForm);
+// JS IS SINGLE THREADED
+// console.log("first");
+// setTimeout(function(){console.log("second");} , 1000);
+// setInterval(function(){console.log("second");} , 1000);
+// console.log("third");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
