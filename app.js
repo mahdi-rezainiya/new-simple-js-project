@@ -754,19 +754,56 @@
 //     (error) => {console.log(error);}
 // );
 
+// ASYNC & AWAIT
+// async function name (a){
+//     return a;
+// }
+// console.log(name("mahdi"));;
+
+// name('mahdi').then((data) => {console.log(data);})
+
+// async function sayHello(){
+//     let promise = new Promise((resolve , reject) => {
+//         let error = "not found";
+//         if(true){
+//             setTimeout(function (){resolve("Hello") , 2000})
+//         }        
+//         else{
+//             reject(error)
+//         }
+//     });
+//     let result = await promise;
+//     return result;
+// }
+
+// sayHello()
+// .then(
+//     (data) => {console.log(data);}
+// )
+// .catch(
+//     (error) => {console.log(error);}
+// )
+
+// TRY & CATCH
+// try{
+//     let result = 10 / x ;
+//     console.log(result + "this is result");
+// }
+// catch(error){
+//     console.log(error.message);
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
+async function fetchData(){
+    try{
+        let result = await promise.reject("Data fetch failed")
+        console.log(result);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+fetchData()
 
 
 
