@@ -678,16 +678,38 @@
 // })
 
 // Event delegation
-// const list = document.querySelector("#myList");
-// // console.log(list);
-// list.addEventListener('click' , (e) => {
-//     // if(e.target.tagName = 'li'){
-//     //     console.log("this is list element");
-//     // }
-//     if(e.target.classList = "js"){
-//         console.log("this is Javascript");
+
+// const div = document.querySelector("div");
+
+// div.addEventListener("click", (event) => {
+//   console.log(event.target);
+//   console.log(event.target.localName);
+//   console.log(event.target.id);
+//     if (event.target.id === "btn-1") {
+//         event.target.style.backgroundColor = "green";
+//     } else if (event.target.id === "btn-2") {
+//         event.target.style.backgroundColor = "red";
+//     } else if (event.target.id === "btn-3") {
+//         event.target.style.backgroundColor = "pink";
+//     } else if (event.target.id === "btn-4") {
+//         event.target.style.backgroundColor = "blue";
+//     } else {
+//         event.target.style.backgroundColor = "black";
 //     }
-// })
+// });
+
+// const div = document.querySelector("div");
+
+// div.addEventListener("click", (event) => {
+    // console.log(event.target);
+    // console.log(event.target.localName);
+    // console.log(event.target.id);
+//     switch (event.target.id) {
+//     case "btn-1":
+//         event.target.style.backgroundColor = "green";
+//         break;
+//     }
+// });
 
 // CALL STACK
 // function a(){
@@ -705,15 +727,32 @@
 // setInterval(function(){console.log("second");} , 1000);
 // console.log("third");
 
+// window.onload = () => {
+//     alert("opened");
+// };
 
+//PROMISE
+// let objectPromise = new Promise((resolve , reject) => {
+//     let a = "mahdi";
+//     let b = false;
+//     if(!b){
+//         resolve(a);
+//     }
+//     else{
+//         reject(b);
+//     }
+// })
 
+// console.log(objectPromise);
+// objectPromise();
 
-
-
-
-
-
-
+// objectPromise
+// .then(
+//     (data) => {console.log(data);}
+// )
+// .catch(
+//     (error) => {console.log(error);}
+// );
 
 
 
