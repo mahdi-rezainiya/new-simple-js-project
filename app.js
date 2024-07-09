@@ -793,21 +793,26 @@
 //     console.log(error.message);
 // }
 
+// async function fetchData(){
+//     try{
+//         let result = await promise.reject("Data fetch failed")
+//         console.log(result);
+//     }
+//     catch(error){
+//         console.log(error);
+//     }
+// }
+// fetchData()
 
-async function fetchData(){
-    try{
-        let result = await promise.reject("Data fetch failed")
-        console.log(result);
-    }
-    catch(error){
-        console.log(error);
-    }
-}
-fetchData()
+// RESTful APIs ====> use json;
+// SOAP APIs ====> use XML in http & smtp;
+// graphQL APIs ====> is programming language for server & client;
 
+// API KEY
+// OAuth
+// JWT(JSON WEB TOKENS)
 
-
-
+// Postman & SoapUI
 
 
 
