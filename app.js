@@ -858,10 +858,204 @@
     // .then(json => console.log(json))
 
 
-    const API = "https://6675350fa8d2b4d072ef1a6e.mockapi.io/family";
-    const API_JOKE = "https://icanhazdadjoke.com/";
+
+// other side of xmlHttpRequest & fetch
+// const url = 'https://jsonplaceholder.typicode.com/todos';
+// const request = new XMLHttpRequest();
+// request.open('GET', url);
+// request.send();
+// request.onload = function(){
+//     if(request.status === 200){
+//         const data = JSON.parse(request.responseText)
+//         // data.forEach(element => {
+//         //     console.log(element);
+//         // });
+//         console.log(data);
+//         for(let element of data){
+//             console.log(element);
+//         }
+//     }
+//     else{
+//         console.log("Not Found");
+//     }
+// }
+
+// console.log(request);
+
+// callback & callback hell
+
+// const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+const url1 = 'https://jsonplaceholder.typicode.com/todos/1';
+const url2 = 'https://jsonplacehoder.typicode.com/todos/2';
+const url3 = 'https://jsonplaceholder.typicode.com/todos/3';
+
+// const getTodos = (url , callback) => {
+//     const request = new XMLHttpRequest();
+//     request.open('GET' , url);
+//     request.send();
+//     request.onload = function(){
+//         if(request.status === 200){
+//             const elements = JSON.parse(request.responseText);
+//             // for(let element of elements){
+//             //     // console.log(element);
+//             //     callback(undefined , element)
+//             // }
+//             // console.log(elements);
+//             callback(undefined , elements)
+//         }
+//         else{
+//             callback("Not Found . . ." , undefined);
+//         }
+//     }
+// }
+
+// callback hell is not good for host
+// getTodos(url1 , function(error , exp){
+//     if(error){
+//         console.log(error);
+//     }
+//     else{
+//         console.log(exp);
+//         getTodos(url3 , function(error , exp){
+//             if(error){
+//                 console.log(error);
+//             }
+//             else{
+//                 console.log(exp);
+//                 getTodos(url2 , function(error , exp){
+//                     if(error){
+//                         console.log(error);
+//                     }
+//                     else{
+//                         console.log(exp);
+//                     }
+//                 });
+//             }
+//         });        
+//     }
+// });
+
+// better to use promise
+
+// const getTodos = (url) => {
+//     return new Promise((resolve , reject) => {
+//         const request = new XMLHttpRequest();
+//         request.open('GET' , url);
+//         request.send();
+//         request.onload = () => {
+//             const data = JSON.parse(request.responseText);
+//             if(resolve) {
+//                 resolve(data)
+//             }
+//             else{
+//                 reject(error)
+//             }
+//         }
+//     })
+// }
+
+// console.log(getTodos(url1)); // ====> this is promise
+// we can have callback hell again or use another one that's better
+
+// getTodos(url1)
+// .then(
+//     (response) => {
+//         console.log(response);
+//         getTodos(url3)
+//         .then((response) => {console.log(response);
+//             getTodos(url2)
+//                 .then((response) => {console.log(response);})
+//                 .catch((error) => {console.log(error);}
+//         );
+//     }
+// )
+// .catch(
+//     (error) => {console.log(error);}
+// );
+//     }
+// )
+// .catch(
+//     (error) => {console.log(error);}
+// );
+
+// best one
+
+
+// getTodos(url1)
+// .then(
+//     (response) => {console.log(response) ; return getTodos(url3)}
+// )
+// .then(
+//     (response) => {console.log(response); return getTodos(url2)}
+// )
+// .then(
+//     (response) => {console.log(response);}
+// )
+// .catch(
+//     (error) => {console.log(error);}
+// );
+
+
+// FETCH
+// const getTodos = fetch(url1);
+// console.log(getTodos); // return promise
+
+// fetch(url1)
+// .then(
+//     (response) => {
+//         if(response.status === 200){
+//             return response.json();
+//         }
+//         else{
+//             throw new Error("Not Found . . .")
+//         }
+//     }
+// )
+// .then((response) => {
+//     console.log(response);
+// })
+// .catch(
+//     (error) => {
+//         console.log(error.message);
+//     }
+// );
+
+
+// Await & Async
+// const getTodos = async function (url){
+//     const response = await fetch(url)
+//     if(response.status === 200){
+//         const data = await response.json();
+//         return data
+//     }
+//     else{
+//         throw new Error("Not Found . . . ")
+//     }
+// }
+// getTodos(url1)
+// .then((response)=>{console.log(response);})
+// .catch((error) => {console.log(error);})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const API = "https://6675350fa8d2b4d072ef1a6e.mockapi.io/family";
+    // const API_JOKE = "https://icanhazdadjoke.com/";
     
-    const get = axios.get(API);
+    // const get = axios.get(API);
     
     // console.log(get);
     // _____________________________________________
