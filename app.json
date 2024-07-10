@@ -1,6 +1,10 @@
 [
-    {"fname" : "mahdi"},
-    {"lname" : "rezainiya"},
-    {"age" : 22},
-    {"city" : true}
+    {
+        "fname": "mahdi",
+        "lname": "rezainiya"
+    },
+    {
+        "fname": "mahdi",
+        "lname": "rezainiya"
+    }
 ]

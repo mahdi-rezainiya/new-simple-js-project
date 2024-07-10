@@ -814,6 +814,111 @@
 
 // Postman & SoapUI
 
+// asynchronous javascript and xml ====> AJAX
+// extensible markup language ====> XML
+
+// XMLHttpRequest
+
+// document.getElementById('loadData').addEventListener('click' , function(){
+//     const request = new XMLHttpRequest();
+//     request.open()
+//     request.send();
+//     request.onreadystatechange = function(){
+//         if(request.readyState === 4 && request.status ===200){
+//             const data = JSON.parse(request.responseText);
+//             document.getElementById('result').innerHTML = `
+//                 <h2>${data.title}<h2/>
+//                 <p>${data.body}<p/>
+//             `
+//         }
+//     }
+// })
+
+// asynchronous javascript and json ====> AJAJ
+// JSON vs XML
+// JSON.parse VS JSON.stringify
+
+// let obj = {
+//     name : "ali",
+//     age : 20 ,
+//     city : "shiraz"
+// }
+// console.log(obj);
+// let objTojson = JSON.stringify(obj); //====> covert object to json type
+// console.log(objTojson);
+// let objAgain = JSON.parse(objTojson);
+// console.log(objAgain);
+
+// fetch('https://6675350fa8d2b4d072ef1a6e.mockapi.io/family')
+    // .then(response => response.json())
+    // .then(json => console.log(json))
+
+// fetch('https://jsonplaceholder.typicode.com/todos/')
+    // .then(response => response.json())
+    // .then(json => console.log(json))
+
+
+    const API = "https://6675350fa8d2b4d072ef1a6e.mockapi.io/family";
+    const API_JOKE = "https://icanhazdadjoke.com/";
+    
+    const get = axios.get(API);
+    
+    // console.log(get);
+    // _____________________________________________
+    
+    // async function fetchApi() {
+    //   const res1 = await axios.get(API);
+    //   const res2 = await fetch(API);
+    //   console.log(res2);
+    // }
+    
+    // fetchApi();
+    // ______________________________________
+    // async function fetchApi() {
+    //   const res = await axios.get(API);
+    //   console.log(res.data);
+    // }
+    
+    // fetchApi();
+    // _______________________________
+    // async function fetchApi() {
+    //   const res = await fetch(API);
+    //   const data = await res.json();
+    //   console.log(data);
+    // }
+    
+    // fetchApi();
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
