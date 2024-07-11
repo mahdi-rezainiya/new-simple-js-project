@@ -1038,14 +1038,23 @@ const url3 = 'https://jsonplaceholder.typicode.com/todos/3';
 // .catch((error) => {console.log(error);})
 
 
+// mockApi with fetch
+
+// const api = 'https://668e552bbf9912d4c92dd33f.mockapi.io/users/';
+
+// // console.log(fetch(api));
+// fetch(api).then((response) => {
+//     return response.json();
+// })
+// .then((response) => {
+//     console.log(response);
+// })
+// .catch((error) => {
+//     console.log(error);
+// })
 
 
-
-
-
-
-
-
+// AXIOS
 
 
 
