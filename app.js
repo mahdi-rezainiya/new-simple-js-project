@@ -7,6 +7,8 @@
 // console.log(4 / "ali");
 // let isTrue= "mahdi";
 
+// import  {bar , baz}  from "./export";
+
 // let text1 = "mahdi";
 // let text2 = "ali";
 // console.log(`${text1} ${text2}`);
@@ -45,7 +47,6 @@
 
 // let x = parseInt("1478");
 // console.log(x);
-
 
 
 // let age = 3 ;
@@ -886,9 +887,9 @@
 
 // const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-const url1 = 'https://jsonplaceholder.typicode.com/todos/1';
-const url2 = 'https://jsonplacehoder.typicode.com/todos/2';
-const url3 = 'https://jsonplaceholder.typicode.com/todos/3';
+// const url1 = 'https://jsonplaceholder.typicode.com/todos/1';
+// const url2 = 'https://jsonplacehoder.typicode.com/todos/2';
+// const url3 = 'https://jsonplaceholder.typicode.com/todos/3';
 
 // const getTodos = (url , callback) => {
 //     const request = new XMLHttpRequest();
@@ -1055,67 +1056,98 @@ const url3 = 'https://jsonplaceholder.typicode.com/todos/3';
 
 
 // AXIOS
+// const api = 'https://668e552bbf9912d4c92dd33f.mockapi.io/users/';
+// console.log(axios.get(api));
+// axios.get(api)
+// .then((response) => {
+//     if(response.status === 200){
+//         // console.log(response.data);
+//         const data = response.data;
+//         for(let element of data){
+//             console.log(element);
+//         }
+//     }
+// })
+// .catch((error) => {
+//     console.log(error);
+// })
 
+// Import & Export
 
+// baz();
+// bar();
 
+// factory function
+// function factoryFunc(name){
+//     const obj ={
+//         name : name,
+//         talk(){
+//             return `Hello my name is ${name}`
+//         }
+//     }
+//     return obj
+// }
 
+// console.log(factoryFunc('mahdi').name);
+// console.log(factoryFunc("mahdi").talk());
 
+// const mahdi = factoryFunc('Mahdi');
+// console.log(mahdi.talk());
 
-    // const API = "https://6675350fa8d2b4d072ef1a6e.mockapi.io/family";
-    // const API_JOKE = "https://icanhazdadjoke.com/";
-    
-    // const get = axios.get(API);
-    
-    // console.log(get);
-    // _____________________________________________
-    
-    // async function fetchApi() {
-    //   const res1 = await axios.get(API);
-    //   const res2 = await fetch(API);
-    //   console.log(res2);
-    // }
-    
-    // fetchApi();
-    // ______________________________________
-    // async function fetchApi() {
-    //   const res = await axios.get(API);
-    //   console.log(res.data);
-    // }
-    
-    // fetchApi();
-    // _______________________________
-    // async function fetchApi() {
-    //   const res = await fetch(API);
-    //   const data = await res.json();
-    //   console.log(data);
-    // }
-    
-    // fetchApi();
-    
+// constructor function
+// function Person(name , age){
+//     this.name = name ;
+//     this.age = age ; 
+//     this.Talk = function(){
+//         return `hi how are you i am ${this.name}`
+//     }
+// }
 
+// const mahdi = new Person("mahdi" , 22);
+// console.log(mahdi.name);
+// console.log(mahdi.Talk());
 
+// class constructor
 
+// class Person{
+//     constructor(name , age){
+//         this.name = name ;
+//         this.age = age;
+//     }
+//     talk(){
+//         return `hi i am ${this.name} and ${this.age}`
+//     }
+// }
+// const mahdi = new Person('mahdi' , 22);
+// console.log(mahdi.name);
+// console.log(mahdi.talk());
 
+// extends in constructor
 
+// class Students extends Person{
+//     constructor(name , age , city , grade){
+//         super(name , age);
+//         this.city = city ;
+//         this.grade = grade;
+//     }
+//     sayTotal(){
+//         return `${this.name} ${this.age} ${this.city} ${this.grade}`
+//     }
+// }
+// const mahdi = new Students("mahdi" , 22 , "tabriz" , 100);
+// console.log(mahdi.name);
+// console.log(mahdi.age);
+// console.log(mahdi.city);
+// console.log(mahdi.grade);
+// console.log(mahdi.talk());
+// console.log(mahdi.sayTotal());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// LocalStorage
+// localStorage.setItem('key1' , "mahdi");
+// const keyOne = localStorage.getItem('key1');
+// console.log(keyOne);
+// localStorage.removeItem('key1');
+// localStorage.clear();
 
 
 
